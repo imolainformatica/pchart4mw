@@ -1374,7 +1374,7 @@
 
        if ( $LastXPos != -1 )
         {
-         $Points   = "";
+         $Points   = array();
          $Points[] = $LastXPos; $Points[] = $LastYPos1;
          $Points[] = $LastXPos; $Points[] = $LastYPos2;
          $Points[] = $XPos; $Points[] = $YPos2;
@@ -1651,7 +1651,7 @@
        for($k=$Index-1;$k>=1;$k--)
         $Yt[$k] = $Yt[$k] * $Yt[$k+1] + $U[$k];
 
-       $Points   = "";
+       $Points   = array();
        $Points[] = $this->GAreaXOffset;
        $Points[] = $LayerHeight;
 
@@ -1686,7 +1686,7 @@
 
          if ( $YLast != NULL && $AroundZero && !isset($Missing[floor($X)]) && !isset($Missing[floor($X+1)]))
           {
-           $aPoints   = "";
+           $aPoints   = array();
            $aPoints[] = $XLast;
            $aPoints[] = $YLast;
            $aPoints[] = $XPos;
@@ -1723,7 +1723,7 @@
 
          if ( $YLast != NULL && $AroundZero )
           {
-           $aPoints   = "";
+           $aPoints   = array();
            $aPoints[] = $XLast;
            $aPoints[] = $YLast;
            $aPoints[] = $LayerWidth-$this->GAreaXOffset;
@@ -1782,7 +1782,7 @@
        foreach ( $DataDescription["Description"] as $keyI => $ValueI )
         { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
-       $aPoints   = "";
+       $aPoints   = array();
        $aPoints[] = $this->GAreaXOffset;
        $aPoints[] = $LayerHeight;
 
@@ -1824,7 +1824,7 @@
 
            if ($YLast <> $Empty && $AroundZero)
             {
-             $Points   = "";
+             $Points   = array();
              $Points[] = $XLast; $Points[] = $YLast;
              $Points[] = $XPos;
              $Points[] = $YPos;
@@ -2127,7 +2127,7 @@
 
            if ( $t % 2 == 1 && $LastX1 != -1)
             {
-             $Plots   = "";
+             $Plots   = array();
              $Plots[] = $X1; $Plots[] = $Y1;
              $Plots[] = $X2; $Plots[] = $Y2;
              $Plots[] = $LastX2; $Plots[] = $LastY2;
@@ -2314,7 +2314,7 @@
 
        $Angle = -90;
        $XLast = -1;
-       $Plots = "";
+       $Plots = array();
        foreach ( $Data as $Key => $Values )
         {
          if ( isset($Data[$Key][$ColName]))
